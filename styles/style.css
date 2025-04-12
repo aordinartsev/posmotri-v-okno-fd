@@ -15,17 +15,20 @@ html {
 
 .page {
   display: flex;
+  flex-direction:inherit;
+  /* justify-content: center; */
+  /* height: 100%; */
+  padding: 0;
+  margin: 0;
   justify-content: center;
-  align-items: center;
-  inline-size: 1200px;
-  width: 1200px;
+  align-content: center;
+  /* inline-size: 1200px; */
+  /* width: 1200px; */
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
   font-size: 18px;
   background-color: #1b1919;
-  margin: 0;
-  padding: 0;
 }
 
 .content {
@@ -33,9 +36,11 @@ html {
   grid-template-columns: 711px 399px;
   grid-template-areas:
     "result details";
-  justify-content: space-between;
-  align-items: flex-end;
+  /* justify-content: space-between;
+  align-items: flex-end; */
   margin: 133px 30px;
+  justify-content: center;
+  align-content: center;
   width: 1140px;
   grid-gap: 30px;
 }
@@ -57,7 +62,10 @@ fieldset {
 .result {
   width: 711px;
   grid-area: result;
-  align-self: flex-end;
+  align-self: end;
+  /* justify-content:space-between; */
+  gap: 16px;
+  padding-bottom: 4px;
 }
 
 .result__video {
@@ -97,12 +105,12 @@ fieldset {
   justify-content: center;
   align-items: center;
   color: #fff;
-  width: 194px;
-  height: 34px;
+  width: 199px;
+  height: 32px;
   gap: 10px;
-  border-width: 1px;
+  /* border-width: 1px; */
   font-family: 'Fira Sans Condensed', sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 18px;
   line-height: 21.6px;
   letter-spacing: 0%;
@@ -157,9 +165,7 @@ fieldset {
 .search-form__checkbox-list {
   display:inline-flex;
   align-items: center;
-  /* justify-content: space-between; */
   gap: 15px;
-  /* border: 0px; */
 }
 
 .search-form__checkbox {
@@ -185,6 +191,7 @@ fieldset {
   font-size: 18px;
   line-height: 21.6px;
   letter-spacing: 0%;
+  text-align: center;
 }
 
 .search-form__label:hover{
@@ -205,8 +212,8 @@ fieldset {
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox {
   background-color: #fff;
-  outline: 1px solid #fff;
-  outline-offset: 1px;
+  outline: 2px solid #fff;
+  outline-offset: 3px;
 }
 
 .content__details {
@@ -230,9 +237,9 @@ fieldset {
   padding-right: 3px;
 }
 
-/* через class .content__card-link псевдокласс :active не работает */
-.content__list-item:active {
+.content__card-link:active {
   background-color: #545050;
+  display: block;
 }
 
 .content__list-container {
@@ -246,11 +253,13 @@ fieldset {
 }
 
 .content__card-link {
+  display: block;
   text-decoration: none;
   color: #fff;
 }
 
 .content__card-link_current {
+  display: block;
   background-color: #545050;
 }
 
